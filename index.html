@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    const arr = []
+    const secret ="hello";
+    window.addEventListener('keydown', (e)=>{
+        
+        arr.push(e.key);
+        arr.splice(-secret.length-1,arr.length-secret.length);
+        console.log(arr);
+        if(arr.join('').includes(secret)){
+            console.log("ding dong");
+            cornify_add();
+        }
+    })
+    
+    
+</script>
+</html>
